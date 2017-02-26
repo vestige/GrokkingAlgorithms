@@ -1,15 +1,15 @@
 def find_smallest(list)
   smallest = list[0]
   smallest_index = 0
-  index = 0
 
-  list.each do |it|
-    if it < smallest
-      smallest = it
-      smallest_index = index
+  count = list.size
+  count.times {|i|
+    if list[i] < smallest
+      smallest = list[i]
+      smallest_index = i
     end
-    index += 1
-  end
+  }
+
   smallest_index
 end
 
